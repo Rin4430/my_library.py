@@ -27,7 +27,7 @@ def prior_prob(table, target, target_value):
   t_list = up_get_column(table, target)
   p_a = sum([1 if v==target_value else 0 for v in t_list])/len(t_list)
   return p_a
- def compute_probs(neg,pos):
+def compute_probs(neg,pos):
   p0 = neg/(neg+pos)
   p1 = pos/(neg+pos)
   return [p0,p1]
